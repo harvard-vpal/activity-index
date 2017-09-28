@@ -44,10 +44,10 @@ file_to_write='example_output.csv'
 
 pcs = pd.read_csv('example_data.csv', dtype={'user_id': str})
 
-df,vs,weights,method=ilia_activity.activity(pcs,variables, max_iter=max_iter, n_levels=n_levels,try_EFA=True)
+df,vs,weights,method=ilia_activity.activity(pcs,variables, max_iter=max_iter, n_levels=n_levels)
 df.to_csv(file_to_write)
-print('Variables:',vs,'\nWeights:',weights,'\nMethod:',method)
-print('Output written to:',file_to_write)
+print 'Variables:',vs,'\nWeights:',weights,'\nMethod:',method
+print 'Output written to:',file_to_write
 
 
 ##############################
